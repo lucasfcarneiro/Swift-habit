@@ -20,6 +20,7 @@
 		00693FC32C6663EE00F84722 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00693FC22C6663EE00F84722 /* SignInViewModel.swift */; };
 		00693FC52C66654500F84722 /* SignInUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00693FC42C66654500F84722 /* SignInUIState.swift */; };
 		00693FC72C666F7E00F84722 /* SplashViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00693FC62C666F7E00F84722 /* SplashViewRouter.swift */; };
+		00929A762C6AA4DE00F67DB6 /* SignInViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A752C6AA4DE00F67DB6 /* SignInViewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		00693FC22C6663EE00F84722 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		00693FC42C66654500F84722 /* SignInUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUIState.swift; sourceTree = "<group>"; };
 		00693FC62C666F7E00F84722 /* SplashViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewRouter.swift; sourceTree = "<group>"; };
+		00929A752C6AA4DE00F67DB6 /* SignInViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				00693FC22C6663EE00F84722 /* SignInViewModel.swift */,
+				00929A752C6AA4DE00F67DB6 /* SignInViewRouter.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				00693FC32C6663EE00F84722 /* SignInViewModel.swift in Sources */,
 				00693FC52C66654500F84722 /* SignInUIState.swift in Sources */,
 				00693FB82C659C2300F84722 /* SplashUIState.swift in Sources */,
+				00929A762C6AA4DE00F67DB6 /* SignInViewRouter.swift in Sources */,
 				00693FC12C66639400F84722 /* SignInView.swift in Sources */,
 				00693FBB2C65C35000F84722 /* SplashViewModel.swift in Sources */,
 			);
@@ -330,7 +334,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -387,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

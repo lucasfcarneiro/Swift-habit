@@ -17,52 +17,68 @@ struct SignInView: View {
     
     var body: some View {
         
-        NavigationView{
-            
-            ScrollView{
-                
-                VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 20) {
+        ZStack{
+            if case SignInUIState.goToHomeScreen = viewModel.uiState {
+                viewModel.homeView()
+            }else {
+                NavigationView {
                     
-                    VStack(alignment: .center, spacing: 8) {
-                        Image("logo")
-                            .resizable()
-                            .scaledToFit()
-                            .padding(.horizontal, 48)
+                    ScrollView{
                         
-                        Text("Login")
-                            .foregroundColor(.yellow)
-                            .font(Font.system(.title).bold())
-                            .padding(.bottom, 8)
-                        
-                        textField
-                        
-                        passwordField
-                        
-                        enterButton
-                        
-                        registerLink
-                        
-                        Text("Copyright @2024")
-                            .foregroundColor(Color.gray)
-                            .font(Font.system(size:12).bold())
-                            .padding(.top,16)
+                        VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 20) {
+                            
+                            VStack(alignment: .center, spacing: 8) {
+                                Image("logo")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .padding(.horizontal, 48)
+                                
+                                Text("Login")
+                                    .foregroundColor(.yellow)
+                                    .font(Font.system(.title).bold())
+                                    .padding(.bottom, 8)
+                                
+                                emailField
+                                
+                                passwordField
+                                
+                                enterButton
+                                
+                                registerLink
+                                
+                                Text("Copyright @2024")
+                                    .foregroundColor(Color.gray)
+                                    .font(Font.system(size:12).bold())
+                                    .padding(.top,16)
+                            }
+                        }
+                        if case SignInUIState.error(let value) = viewModel.uiState{
+                            
+                            Text("")
+                                .alert(isPresented: .constant(true)) {
+                                    Alert(title: Text("Habit"), message: Text(value), dismissButton: .default(Text("OK")){
+                                        //faz algo quando some o alerta
+                                    })
+                                }
+                        }
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .padding(.horizontal, 32)
+                        .background(Color.white)
+                        .navigationBarTitleDisplayMode(.inline)
+                        .navigationTitle("Login")
+                        .navigationBarHidden(navigationHidden)
                 }
-            }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                .padding(.horizontal, 32)
-                .background(Color.white)
-                .navigationBarTitleDisplayMode(.inline)
-                .navigationTitle("Login")
-                .navigationBarHidden(navigationHidden)
+            }
         }
+        
     }
 }
 
 extension SignInView{
-    var textField : some View{
+    var emailField : some View{
         TextField("", text: $email)
             .border(Color.black)
-        
     }
 }
 
@@ -76,7 +92,7 @@ extension SignInView{
 extension SignInView{
     var enterButton : some View{
         Button("Entrar"){
-            //evento de clique
+            viewModel.login(email : email, password : password)
         }
     }
 }
@@ -88,7 +104,6 @@ extension SignInView {
             Text("Ainda não possui cadastro?")
                 .foregroundColor(.gray)
                 .padding(.top, 38)
-            
             
             ZStack{
                 NavigationLink(
