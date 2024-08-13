@@ -46,6 +46,7 @@ extension SplashView {
                 Text("")
                     .alert(isPresented: .constant(true)) {
                         Alert(title: Text("Habit"), message: Text(error), dismissButton: .default(Text("OK")){
+                            //faz algo quando some o o alerta
                         })
                     }
                }
