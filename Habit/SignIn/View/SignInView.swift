@@ -10,6 +10,7 @@ import SwiftUI
 struct SignInView: View {
     
     @ObservedObject var viewModel: SignInViewModel
+    
     @State var email = ""
     @State var password = ""
     @State var action : Int? = 0
@@ -63,11 +64,11 @@ struct SignInView: View {
                         }
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .padding(.horizontal, 32)
-                        .background(Color.white)
-                        .navigationBarTitleDisplayMode(.inline)
-                        .navigationTitle("Login")
-                        .navigationBarHidden(navigationHidden)
+                    .padding(.horizontal, 32)
+                    .background(Color.white)
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationTitle("Login")
+                    .navigationBarHidden(navigationHidden)
                 }
             }
         }
@@ -107,7 +108,7 @@ extension SignInView {
             
             ZStack{
                 NavigationLink(
-                    destination: Text("Tela de cadastro"),
+                    destination: viewModel.signUpView(),
                     tag: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/,
                     selection: $action,
                     label: {EmptyView()})

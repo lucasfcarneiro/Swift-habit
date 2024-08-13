@@ -21,6 +21,11 @@
 		00693FC52C66654500F84722 /* SignInUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00693FC42C66654500F84722 /* SignInUIState.swift */; };
 		00693FC72C666F7E00F84722 /* SplashViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00693FC62C666F7E00F84722 /* SplashViewRouter.swift */; };
 		00929A762C6AA4DE00F67DB6 /* SignInViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A752C6AA4DE00F67DB6 /* SignInViewRouter.swift */; };
+		00929A7C2C6AD3E500F67DB6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A7B2C6AD3E500F67DB6 /* SignUpView.swift */; };
+		00929A7E2C6AD44200F67DB6 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A7D2C6AD44200F67DB6 /* SignUpViewModel.swift */; };
+		00929A822C6AEF9D00F67DB6 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A812C6AEF9D00F67DB6 /* Gender.swift */; };
+		00929A842C6AF7F900F67DB6 /* SignUpUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A832C6AF7F900F67DB6 /* SignUpUIState.swift */; };
+		00929A862C6AF91300F67DB6 /* SignUpViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A852C6AF91300F67DB6 /* SignUpViewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,11 @@
 		00693FC42C66654500F84722 /* SignInUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUIState.swift; sourceTree = "<group>"; };
 		00693FC62C666F7E00F84722 /* SplashViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewRouter.swift; sourceTree = "<group>"; };
 		00929A752C6AA4DE00F67DB6 /* SignInViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewRouter.swift; sourceTree = "<group>"; };
+		00929A7B2C6AD3E500F67DB6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		00929A7D2C6AD44200F67DB6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		00929A812C6AEF9D00F67DB6 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		00929A832C6AF7F900F67DB6 /* SignUpUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUIState.swift; sourceTree = "<group>"; };
+		00929A852C6AF91300F67DB6 /* SignUpViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,8 @@
 		00693FA32C65997000F84722 /* Habit */ = {
 			isa = PBXGroup;
 			children = (
+				00929A7F2C6AEF8300F67DB6 /* Common */,
+				00929A772C6AD3B100F67DB6 /* SignUp */,
 				00196BFF2C67F40300148566 /* Home */,
 				00693FBC2C6662FA00F84722 /* SignIn */,
 				00693FB22C659B1800F84722 /* Splash */,
@@ -194,6 +206,57 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		00929A772C6AD3B100F67DB6 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				00929A7A2C6AD3D400F67DB6 /* Model */,
+				00929A792C6AD3CB00F67DB6 /* ViewModel */,
+				00929A782C6AD3C200F67DB6 /* View */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		00929A782C6AD3C200F67DB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00929A7B2C6AD3E500F67DB6 /* SignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00929A792C6AD3CB00F67DB6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				00929A7D2C6AD44200F67DB6 /* SignUpViewModel.swift */,
+				00929A852C6AF91300F67DB6 /* SignUpViewRouter.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		00929A7A2C6AD3D400F67DB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00929A832C6AF7F900F67DB6 /* SignUpUIState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00929A7F2C6AEF8300F67DB6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				00929A802C6AEF8C00F67DB6 /* Model */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		00929A802C6AEF8C00F67DB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00929A812C6AEF9D00F67DB6 /* Gender.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -269,13 +332,18 @@
 				00693FA52C65997000F84722 /* HabitApp.swift in Sources */,
 				00196C082C67F45C00148566 /* HomeViewModel.swift in Sources */,
 				00196C0A2C67F4A000148566 /* HomeUIState.swift in Sources */,
+				00929A842C6AF7F900F67DB6 /* SignUpUIState.swift in Sources */,
 				00693FB62C659B7C00F84722 /* SplashView.swift in Sources */,
+				00929A822C6AEF9D00F67DB6 /* Gender.swift in Sources */,
+				00929A7E2C6AD44200F67DB6 /* SignUpViewModel.swift in Sources */,
 				00693FC32C6663EE00F84722 /* SignInViewModel.swift in Sources */,
 				00693FC52C66654500F84722 /* SignInUIState.swift in Sources */,
+				00929A7C2C6AD3E500F67DB6 /* SignUpView.swift in Sources */,
 				00693FB82C659C2300F84722 /* SplashUIState.swift in Sources */,
 				00929A762C6AA4DE00F67DB6 /* SignInViewRouter.swift in Sources */,
 				00693FC12C66639400F84722 /* SignInView.swift in Sources */,
 				00693FBB2C65C35000F84722 /* SplashViewModel.swift in Sources */,
+				00929A862C6AF91300F67DB6 /* SignUpViewRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
