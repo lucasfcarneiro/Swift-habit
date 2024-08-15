@@ -39,7 +39,6 @@ extension SplashView {
                 .scaledToFit()
                 .frame(maxWidth: .infinity, maxHeight: .infinity )
                 .padding(35)
-                .background(Color.white)
                 .ignoresSafeArea()
             
             if let error = error {
@@ -86,4 +85,9 @@ extension SplashView {
 
 #Preview {
     SplashView(viewModel: SplashViewModel())
+        .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+}
+#Preview {
+    SplashView(viewModel: SplashViewModel())
+        .preferredColorScheme(.light)
 }

@@ -16,10 +16,12 @@ class SignInViewModel: ObservableObject {
     
     @Published var uiState : SignInUIState = .none
     
+    @Published var email = ""
+    @Published var password = ""
+    
     init(){
         cancellable = publisher.sink { value in
-//            print("Usuario criado goToHome : \(value)")
-            
+           
             if value {
                 self.uiState = .goToHomeScreen
             }
@@ -30,14 +32,13 @@ class SignInViewModel: ObservableObject {
         cancellable?.cancel()
     }
     
-    func login(email: String, password: String) {
+    func login() {
         
         self.uiState = .loading
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1 ){
             //simula resposta servidor chamando depois de 1 seg
             self.uiState = .goToHomeScreen
-            
             //self.uiState = .error("Usuario ou senha incorreta")
             
         }
