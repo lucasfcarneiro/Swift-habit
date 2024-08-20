@@ -47,7 +47,7 @@ struct SignUpView: View {
                             stringBinding: $viewModel.document,
                             placeholder: "CPF",
                             error: "CPF invalido",
-                            keyboard: .emailAddress,
+                            keyboard: .numberPad,
                             failure: viewModel.document.count != 11)
                         //TODO MASK
                         //TODO  isDisable
@@ -65,14 +65,13 @@ struct SignUpView: View {
                             stringBinding: $viewModel.birthday,
                             placeholder: "Data de nascimento",
                             error: "Data deve ser dd/mm/aaaa",
-                            keyboard: .default,
+                            keyboard: .emailAddress,
                             failure: viewModel.birthday.count < 10)
                         //TODO MASK
                         
                         genderField
                         enterButton
                     }
-                    Spacer()
                 }.padding(.horizontal, 8)
                 
             }.padding()

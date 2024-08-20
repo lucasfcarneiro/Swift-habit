@@ -30,6 +30,9 @@
 		00929A902C6D293B00F67DB6 /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A8F2C6D293B00F67DB6 /* CustomTextFieldStyle.swift */; };
 		00929A952C6D3EC300F67DB6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A942C6D3EC300F67DB6 /* String+Extension.swift */; };
 		00929A972C6D465800F67DB6 /* LoadingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A962C6D465800F67DB6 /* LoadingButtonView.swift */; };
+		00929A9A2C6EF27200F67DB6 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A992C6EF27200F67DB6 /* WebService.swift */; };
+		00929A9C2C6FBD4300F67DB6 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A9B2C6FBD4300F67DB6 /* SignUpRequest.swift */; };
+		00929A9E2C74F54100F67DB6 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A9D2C74F54100F67DB6 /* SignUpResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,9 @@
 		00929A8F2C6D293B00F67DB6 /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
 		00929A942C6D3EC300F67DB6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		00929A962C6D465800F67DB6 /* LoadingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButtonView.swift; sourceTree = "<group>"; };
+		00929A992C6EF27200F67DB6 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		00929A9B2C6FBD4300F67DB6 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		00929A9D2C74F54100F67DB6 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				00929A832C6AF7F900F67DB6 /* SignUpUIState.swift */,
+				00929A9B2C6FBD4300F67DB6 /* SignUpRequest.swift */,
+				00929A9D2C74F54100F67DB6 /* SignUpResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,6 +260,7 @@
 		00929A7F2C6AEF8300F67DB6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				00929A982C6EF25C00F67DB6 /* Network */,
 				00929A932C6D3E9F00F67DB6 /* Lang */,
 				00929A872C6D10D000F67DB6 /* View */,
 				00929A802C6AEF8C00F67DB6 /* Model */,
@@ -291,6 +300,14 @@
 				00929A942C6D3EC300F67DB6 /* String+Extension.swift */,
 			);
 			path = Lang;
+			sourceTree = "<group>";
+		};
+		00929A982C6EF25C00F67DB6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				00929A992C6EF27200F67DB6 /* WebService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,9 +380,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00929A9A2C6EF27200F67DB6 /* WebService.swift in Sources */,
 				00196C062C67F44D00148566 /* HomeView.swift in Sources */,
 				00929A952C6D3EC300F67DB6 /* String+Extension.swift in Sources */,
 				00929A972C6D465800F67DB6 /* LoadingButtonView.swift in Sources */,
+				00929A9E2C74F54100F67DB6 /* SignUpResponse.swift in Sources */,
 				00693FC72C666F7E00F84722 /* SplashViewRouter.swift in Sources */,
 				00693FA52C65997000F84722 /* HabitApp.swift in Sources */,
 				00196C082C67F45C00148566 /* HomeViewModel.swift in Sources */,
@@ -380,6 +399,7 @@
 				00929A7C2C6AD3E500F67DB6 /* SignUpView.swift in Sources */,
 				00693FB82C659C2300F84722 /* SplashUIState.swift in Sources */,
 				00929A762C6AA4DE00F67DB6 /* SignInViewRouter.swift in Sources */,
+				00929A9C2C6FBD4300F67DB6 /* SignUpRequest.swift in Sources */,
 				00693FC12C66639400F84722 /* SignInView.swift in Sources */,
 				00929A8B2C6D112F00F67DB6 /* EditTextView.swift in Sources */,
 				00693FBB2C65C35000F84722 /* SplashViewModel.swift in Sources */,
