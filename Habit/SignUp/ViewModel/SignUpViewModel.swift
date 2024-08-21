@@ -25,7 +25,7 @@ class SignUpViewModel: ObservableObject {
     func signUp(){
         self.uiState = .loading
         
-       //Pegar a String -> dd/MM/yyyy -> Date
+        //Pegar a String -> dd/MM/yyyy -> Date
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "dd/MM/yyyy"
@@ -33,16 +33,16 @@ class SignUpViewModel: ObservableObject {
         let dateFormatted = formatter.date(from: birthday)
         
         //Validar a Data
-        guard let dateFormatted = dateFormatted else{
+        guard let dateFormatted = dateFormatted else {
             self.uiState = .error("Data inválida \(birthday)")
             return
         }
         
         //Date -> yyyy/MM/dd -> String
-        formatter.dateFormat = "yyyy/MM/dd"
+        formatter.dateFormat = "yyyy-MM-dd"
         let birthday = formatter.string(from: dateFormatted)
         
-        
+        //Main Thread
         WebService.postUser( request: SignUpRequest (
             fullName: fullName,
             email: email,
@@ -50,11 +50,29 @@ class SignUpViewModel: ObservableObject {
             document: document,
             phone: phone,
             birthday: birthday,
-            gender: gender.index))
-   }
+            gender: gender.index)) { (successResponse, errorResponse) in
+        
+        //Non Main Thread
+                if let error = errorResponse {
+                    DispatchQueue.main.async {
+                        self.uiState = .error(error.detail)
+                    }
+                }
+                
+                if let success = successResponse {
+                    DispatchQueue.main.async {
+                        self.publisher.send(success)
+                        if success {
+                            self.uiState = .success
+                        }
+                    }
+                    
+                }
+        }
+    }
 }
-                             
-                             
+
+
 extension SignUpViewModel {
     func homeView() -> some View {
         return SignUpViewRouter.makeHomeView()

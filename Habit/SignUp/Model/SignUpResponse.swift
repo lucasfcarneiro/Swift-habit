@@ -7,11 +7,6 @@
 
 import Foundation
 
-struct SignUpResponse : Decodable {
+struct SignUpResponse {
  
-    let detail: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case detail
-    }
 }

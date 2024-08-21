@@ -36,11 +36,21 @@ class SignInViewModel: ObservableObject {
         
         self.uiState = .loading
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1 ){
-            //simula resposta servidor chamando depois de 1 seg
-            self.uiState = .goToHomeScreen
-            //self.uiState = .error("Usuario ou senha incorreta")
+        WebService.login(request: SignInRequest(email: email, 
+                                                password: password)) {(successResponse, ErrorResponse) in
             
+            if let error = ErrorResponse {
+                DispatchQueue.main.async {
+                    self.uiState = .error(error.detail)
+                }
+            }
+            
+            if let success = successResponse {
+                DispatchQueue.main.async {
+                    print(success)
+                    self.uiState = .goToHomeScreen
+                }
+            }
         }
     }
 }
