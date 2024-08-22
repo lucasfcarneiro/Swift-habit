@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SignInResponse : Decodable {
+struct SignInSuccessResponse : Decodable {
     
     let accessToken: String
     let refreshToken: String
