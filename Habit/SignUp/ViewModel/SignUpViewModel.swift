@@ -51,8 +51,8 @@ class SignUpViewModel: ObservableObject {
             phone: phone,
             birthday: birthday,
             gender: gender.index)) { (successResponse, errorResponse) in
-        
-        //Non Main Thread
+                
+                //Non Main Thread
                 if let error = errorResponse {
                     DispatchQueue.main.async {
                         self.uiState = .error(error.detail)
@@ -60,14 +60,24 @@ class SignUpViewModel: ObservableObject {
                 }
                 
                 if let success = successResponse {
-                    DispatchQueue.main.async {
-                        self.publisher.send(success)
-                        if success {
-                            self.uiState = .success
+                    WebService.login(request: SignInRequest(email: self.email,
+                                                            password: self.password)) {(successResponse, ErrorResponse) in
+                        
+                        if let error = ErrorResponse {
+                            DispatchQueue.main.async {
+                                self.uiState = .error(error.detail.message)
+                            }
+                        }
+                        
+                        if let successSignIn = successResponse {
+                            DispatchQueue.main.async {
+                                print(successSignIn)
+                                self.publisher.send(success)
+                                self.uiState = .success
                         }
                     }
-                    
                 }
+            }
         }
     }
 }

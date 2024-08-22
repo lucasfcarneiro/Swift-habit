@@ -35,7 +35,8 @@
 		00929A9E2C74F54100F67DB6 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A9D2C74F54100F67DB6 /* SignUpResponse.swift */; };
 		00929AA02C75039C00F67DB6 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A9F2C75039C00F67DB6 /* ErrorResponse.swift */; };
 		00929AA22C752ADE00F67DB6 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AA12C752ADE00F67DB6 /* SignInRequest.swift */; };
-		00929AA42C752E2600F67DB6 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AA32C752E2600F67DB6 /* SignInResponse.swift */; };
+		00929AA42C752E2600F67DB6 /* SignInSuccessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AA32C752E2600F67DB6 /* SignInSuccessResponse.swift */; };
+		00929AA62C765EB600F67DB6 /* SignInErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AA52C765EB600F67DB6 /* SignInErrorResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,7 +69,8 @@
 		00929A9D2C74F54100F67DB6 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		00929A9F2C75039C00F67DB6 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		00929AA12C752ADE00F67DB6 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
-		00929AA32C752E2600F67DB6 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
+		00929AA32C752E2600F67DB6 /* SignInSuccessResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSuccessResponse.swift; sourceTree = "<group>"; };
+		00929AA52C765EB600F67DB6 /* SignInErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInErrorResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		00693FA32C65997000F84722 /* Habit */ = {
 			isa = PBXGroup;
 			children = (
+				00929AA72C77A23C00F67DB6 /* New Group */,
 				00929A7F2C6AEF8300F67DB6 /* Common */,
 				00929A772C6AD3B100F67DB6 /* SignUp */,
 				00196BFF2C67F40300148566 /* Home */,
@@ -206,7 +209,8 @@
 			children = (
 				00693FC42C66654500F84722 /* SignInUIState.swift */,
 				00929AA12C752ADE00F67DB6 /* SignInRequest.swift */,
-				00929AA32C752E2600F67DB6 /* SignInResponse.swift */,
+				00929AA32C752E2600F67DB6 /* SignInSuccessResponse.swift */,
+				00929AA52C765EB600F67DB6 /* SignInErrorResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,6 +323,13 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		00929AA72C77A23C00F67DB6 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -398,6 +409,7 @@
 				00693FC72C666F7E00F84722 /* SplashViewRouter.swift in Sources */,
 				00693FA52C65997000F84722 /* HabitApp.swift in Sources */,
 				00196C082C67F45C00148566 /* HomeViewModel.swift in Sources */,
+				00929AA62C765EB600F67DB6 /* SignInErrorResponse.swift in Sources */,
 				00196C0A2C67F4A000148566 /* HomeUIState.swift in Sources */,
 				00929A842C6AF7F900F67DB6 /* SignUpUIState.swift in Sources */,
 				00693FB62C659B7C00F84722 /* SplashView.swift in Sources */,
@@ -413,7 +425,7 @@
 				00929A9C2C6FBD4300F67DB6 /* SignUpRequest.swift in Sources */,
 				00693FC12C66639400F84722 /* SignInView.swift in Sources */,
 				00929A8B2C6D112F00F67DB6 /* EditTextView.swift in Sources */,
-				00929AA42C752E2600F67DB6 /* SignInResponse.swift in Sources */,
+				00929AA42C752E2600F67DB6 /* SignInSuccessResponse.swift in Sources */,
 				00693FBB2C65C35000F84722 /* SplashViewModel.swift in Sources */,
 				00929A862C6AF91300F67DB6 /* SignUpViewRouter.swift in Sources */,
 			);

@@ -29,9 +29,18 @@ struct LoadingButtonView: View {
                     .cornerRadius(4.0)
             }).disabled(disable || showProgress)
             
-            ProgressView()
-                .progressViewStyle(CircularProgressViewStyle())
-                .opacity(showProgress ? 1 : 0)
+            if #available(iOS 15.0, *) {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .tint(.black)
+                    .scaleEffect(1.5)
+                    .opacity(showProgress ? 1 : 0)
+            } else {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .scaleEffect(1.5)
+                    .opacity(showProgress ? 1 : 0)
+            }
         }
     }
 }
