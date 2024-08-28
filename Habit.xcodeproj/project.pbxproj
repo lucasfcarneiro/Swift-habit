@@ -37,6 +37,8 @@
 		00929AA22C752ADE00F67DB6 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AA12C752ADE00F67DB6 /* SignInRequest.swift */; };
 		00929AA42C752E2600F67DB6 /* SignInSuccessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AA32C752E2600F67DB6 /* SignInSuccessResponse.swift */; };
 		00929AA62C765EB600F67DB6 /* SignInErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AA52C765EB600F67DB6 /* SignInErrorResponse.swift */; };
+		00929AAD2C792B7000F67DB6 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AAC2C792B7000F67DB6 /* SignInInteractor.swift */; };
+		00929AAF2C7D013000F67DB6 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AAE2C7D013000F67DB6 /* RemoteDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 		00929AA12C752ADE00F67DB6 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		00929AA32C752E2600F67DB6 /* SignInSuccessResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSuccessResponse.swift; sourceTree = "<group>"; };
 		00929AA52C765EB600F67DB6 /* SignInErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInErrorResponse.swift; sourceTree = "<group>"; };
+		00929AAC2C792B7000F67DB6 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
+		00929AAE2C7D013000F67DB6 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +142,6 @@
 		00693FA32C65997000F84722 /* Habit */ = {
 			isa = PBXGroup;
 			children = (
-				00929AA72C77A23C00F67DB6 /* New Group */,
 				00929A7F2C6AEF8300F67DB6 /* Common */,
 				00929A772C6AD3B100F67DB6 /* SignUp */,
 				00196BFF2C67F40300148566 /* Home */,
@@ -197,6 +200,7 @@
 		00693FBC2C6662FA00F84722 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				00929AAB2C792B5A00F67DB6 /* Interactor */,
 				00693FBF2C66631600F84722 /* View */,
 				00693FBE2C66630E00F84722 /* ViewModel */,
 				00693FBD2C66630800F84722 /* Model */,
@@ -319,15 +323,17 @@
 			isa = PBXGroup;
 			children = (
 				00929A992C6EF27200F67DB6 /* WebService.swift */,
+				00929AAE2C7D013000F67DB6 /* RemoteDataSource.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		00929AA72C77A23C00F67DB6 /* New Group */ = {
+		00929AAB2C792B5A00F67DB6 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				00929AAC2C792B7000F67DB6 /* SignInInteractor.swift */,
 			);
-			path = "New Group";
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +412,7 @@
 				00929A972C6D465800F67DB6 /* LoadingButtonView.swift in Sources */,
 				00929A9E2C74F54100F67DB6 /* SignUpResponse.swift in Sources */,
 				00929AA02C75039C00F67DB6 /* ErrorResponse.swift in Sources */,
+				00929AAD2C792B7000F67DB6 /* SignInInteractor.swift in Sources */,
 				00693FC72C666F7E00F84722 /* SplashViewRouter.swift in Sources */,
 				00693FA52C65997000F84722 /* HabitApp.swift in Sources */,
 				00196C082C67F45C00148566 /* HomeViewModel.swift in Sources */,
@@ -415,6 +422,7 @@
 				00693FB62C659B7C00F84722 /* SplashView.swift in Sources */,
 				00929A822C6AEF9D00F67DB6 /* Gender.swift in Sources */,
 				00929AA22C752ADE00F67DB6 /* SignInRequest.swift in Sources */,
+				00929AAF2C7D013000F67DB6 /* RemoteDataSource.swift in Sources */,
 				00929A7E2C6AD44200F67DB6 /* SignUpViewModel.swift in Sources */,
 				00693FC32C6663EE00F84722 /* SignInViewModel.swift in Sources */,
 				00929A902C6D293B00F67DB6 /* CustomTextFieldStyle.swift in Sources */,

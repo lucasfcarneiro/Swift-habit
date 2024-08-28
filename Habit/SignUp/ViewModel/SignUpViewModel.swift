@@ -59,25 +59,25 @@ class SignUpViewModel: ObservableObject {
                     }
                 }
                 
-                if let success = successResponse {
-                    WebService.login(request: SignInRequest(email: self.email,
-                                                            password: self.password)) {(successResponse, ErrorResponse) in
-                        
-                        if let error = ErrorResponse {
-                            DispatchQueue.main.async {
-                                self.uiState = .error(error.detail.message)
-                            }
-                        }
-                        
-                        if let successSignIn = successResponse {
-                            DispatchQueue.main.async {
-                                print(successSignIn)
-                                self.publisher.send(success)
-                                self.uiState = .success
-                        }
-                    }
-                }
-            }
+//                if let success = successResponse {
+//                    WebService.login(request: SignInRequest(email: self.email,
+//                                                            password: self.password)) {(successResponse, ErrorResponse) in
+//                        
+//                        if let error = ErrorResponse {
+//                            DispatchQueue.main.async {
+//                                self.uiState = .error(error.detail.message)
+//                            }
+//                        }
+//                        
+//                        if let successSignIn = successResponse {
+//                            DispatchQueue.main.async {
+//                                print(successSignIn)
+//                                self.publisher.send(success)
+//                                self.uiState = .success
+//                        }
+//                    }
+//                }
+//            }
         }
     }
 }

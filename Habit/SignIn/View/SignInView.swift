@@ -127,10 +127,10 @@ extension SignInView {
 }
 
 #Preview {
-    SignInView(viewModel: SignInViewModel())
+    SignInView(viewModel: SignInViewModel(interactor: SignInInteractor()))
         .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
 }
 #Preview {
-    SignInView(viewModel: SignInViewModel())
+    SignInView(viewModel: SignInViewModel(interactor: SignInInteractor()))
         .preferredColorScheme(.light)
 }
