@@ -55,7 +55,6 @@ enum WebService{
         let task = URLSession.shared.dataTask(with: urlRequest) {data, response, error in
             //Roda em background (Non-MainThread)
             guard let data = data, error == nil else {
-                print(error)
                 completion(.failure(.internarServerError, nil))
                 return
             }
@@ -85,8 +84,8 @@ enum WebService{
     }
     
     public static func call<T: Encodable>(path: Endpoint,
-                                           body: T,
-                                           completion: @escaping (Result) -> Void){
+                                          body: T,
+                                          completion: @escaping (Result) -> Void){
         
         guard let jsonData = try? JSONEncoder().encode(body) else { return }
         
@@ -110,27 +109,5 @@ enum WebService{
              contentType: .formUrl,
              data: components?.query?.data(using: .utf8),
              completion: completion)
-    }
-    
-    static func postUser(request: SignUpRequest, completion: @escaping (Bool?, ErrorResponse?) -> Void) {
-        
-        call(path: .postUser, body: request) { result in
-            switch result {
-            case .failure(let error, let data):
-                if let data = data {
-                    if error == .badRequest {
-                        
-                        let decoder = JSONDecoder()  //decodifica a resposta do servidor
-                        let response = try? decoder.decode(ErrorResponse.self, from: data)
-                        completion(nil, response)
-                    }
-                }
-                break
-            case .success(let data):
-                completion(true, nil)
-                print(String(data: data, encoding: .utf8) as Any)
-                break
-            }
-        }
     }
 }
