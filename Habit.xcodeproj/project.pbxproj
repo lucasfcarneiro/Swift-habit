@@ -42,6 +42,8 @@
 		00929AB52C7FCB9800F67DB6 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AB42C7FCB9800F67DB6 /* AppError.swift */; };
 		00929AB72C80BE1800F67DB6 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AB62C80BE1800F67DB6 /* SignUpInteractor.swift */; };
 		00929AB92C80C0E900F67DB6 /* SignUpRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AB82C80C0E900F67DB6 /* SignUpRemoteDataSource.swift */; };
+		00929ABB2C80DF6700F67DB6 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929ABA2C80DF6700F67DB6 /* UserAuth.swift */; };
+		00929ABE2C80E0C800F67DB6 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929ABD2C80E0C800F67DB6 /* LocalDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,8 @@
 		00929AB42C7FCB9800F67DB6 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		00929AB62C80BE1800F67DB6 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		00929AB82C80C0E900F67DB6 /* SignUpRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRemoteDataSource.swift; sourceTree = "<group>"; };
+		00929ABA2C80DF6700F67DB6 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
+		00929ABD2C80E0C800F67DB6 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +301,7 @@
 				00929A812C6AEF9D00F67DB6 /* Gender.swift */,
 				00929A9F2C75039C00F67DB6 /* ErrorResponse.swift */,
 				00929AB42C7FCB9800F67DB6 /* AppError.swift */,
+				00929ABA2C80DF6700F67DB6 /* UserAuth.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				00929A992C6EF27200F67DB6 /* WebService.swift */,
+				00929ABD2C80E0C800F67DB6 /* LocalDataSource.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -433,10 +439,12 @@
 				00929AAD2C792B7000F67DB6 /* SignInInteractor.swift in Sources */,
 				00693FC72C666F7E00F84722 /* SplashViewRouter.swift in Sources */,
 				00693FA52C65997000F84722 /* HabitApp.swift in Sources */,
+				00929ABE2C80E0C800F67DB6 /* LocalDataSource.swift in Sources */,
 				00196C082C67F45C00148566 /* HomeViewModel.swift in Sources */,
 				00929AA62C765EB600F67DB6 /* SignInErrorResponse.swift in Sources */,
 				00196C0A2C67F4A000148566 /* HomeUIState.swift in Sources */,
 				00929A842C6AF7F900F67DB6 /* SignUpUIState.swift in Sources */,
+				00929ABB2C80DF6700F67DB6 /* UserAuth.swift in Sources */,
 				00693FB62C659B7C00F84722 /* SplashView.swift in Sources */,
 				00929A822C6AEF9D00F67DB6 /* Gender.swift in Sources */,
 				00929AA22C752ADE00F67DB6 /* SignInRequest.swift in Sources */,
