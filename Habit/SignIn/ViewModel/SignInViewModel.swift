@@ -12,6 +12,7 @@ class SignInViewModel: ObservableObject {
     
     private var cancellable : AnyCancellable?
     private var cancellableRequest : AnyCancellable?
+    
     private let publisher = PassthroughSubject<Bool, Never>()
     private let interactor: SignInInteractor
     
@@ -53,6 +54,11 @@ class SignInViewModel: ObservableObject {
             }
         } receiveValue: { success in
             print(success)
+            let auth = UserAuth(idToken: success.accessToken,
+                                refreshToken: success.refreshToken,
+                                expires: success.expires,
+                                tokenType: success.tokenType)
+            self.interactor.insertAuth(userAuth: auth)
             self.uiState = .goToHomeScreen
         }
     }

@@ -24,7 +24,7 @@ extension SignUpInteractor {
        return remoteSignUp.postUser(request: request)
     }
     
-    func login(loginRequest request: SignInRequest) -> Future<SignInSuccessResponse, AppError>{
+    func login(loginRequest request: SignInRequest) -> Future<SignInResponse, AppError>{
         return remoteSignIn.login(request: request)
     }
 }

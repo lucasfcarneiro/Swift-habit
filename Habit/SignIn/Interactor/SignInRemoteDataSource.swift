@@ -17,8 +17,8 @@ class SignInRemoteDataSource {
         
     }
     
-    func login(request: SignInRequest) -> Future<SignInSuccessResponse, AppError>{
-        return Future<SignInSuccessResponse, AppError> { promise in
+    func login(request: SignInRequest) -> Future<SignInResponse, AppError>{
+        return Future<SignInResponse, AppError> { promise in
            
             WebService.call(path: .login, params: [
                 URLQueryItem(name: "username", value: request.email),
@@ -40,7 +40,7 @@ class SignInRemoteDataSource {
                     break
                 case .success(let data):
                     let decoder = JSONDecoder()
-                    let response = try? decoder.decode(SignInSuccessResponse.self, from: data)
+                    let response = try? decoder.decode(SignInResponse.self, from: data)
                     //completion(response, nil)
                     
                     guard let response = response else {

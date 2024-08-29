@@ -10,6 +10,12 @@ import Combine
 
 class LocalDataSource {
     
+    static var shared: LocalDataSource = LocalDataSource()
+    
+    private init(){
+        
+    }
+    
     private func saveValue(value: UserAuth){
         UserDefaults.standard.setValue(try? PropertyListEncoder().encode(value), forKey: "user_key")
     }
