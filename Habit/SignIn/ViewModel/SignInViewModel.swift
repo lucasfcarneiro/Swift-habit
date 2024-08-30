@@ -36,6 +36,7 @@ class SignInViewModel: ObservableObject {
         cancellableRequest?.cancel()
     }
     
+    
     func login() {
         
         self.uiState = .loading
@@ -56,7 +57,8 @@ class SignInViewModel: ObservableObject {
             print(success)
             let auth = UserAuth(idToken: success.accessToken,
                                 refreshToken: success.refreshToken,
-                                expires: success.expires,
+                                //data atual + data do token
+                                expires: Date().timeIntervalSince1970 + Double(success.expires),
                                 tokenType: success.tokenType)
             self.interactor.insertAuth(userAuth: auth)
             self.uiState = .goToHomeScreen

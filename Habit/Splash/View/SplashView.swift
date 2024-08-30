@@ -84,10 +84,10 @@ extension SplashView {
 //}
 
 #Preview {
-    SplashView(viewModel: SplashViewModel())
+    SplashView(viewModel: SplashViewModel(interactor: SplashInteractor()))
         .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
 }
 #Preview {
-    SplashView(viewModel: SplashViewModel())
+    SplashView(viewModel: SplashViewModel(interactor: SplashInteractor()))
         .preferredColorScheme(.light)
 }
