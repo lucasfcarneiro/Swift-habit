@@ -9,7 +9,7 @@ import Foundation
 
 class HabitViewModel: ObservableObject{
     
-    @Published var uiState: HabitUIState = .emptyList
+    @Published var uiState: HabitUIState = .fullList
     
     @Published var title = "Atenção"
     @Published var headline = "Fique ligado"

@@ -26,7 +26,6 @@ struct HabitView: View {
                             
                             addButton
                             
-                            
                             if case HabitUIState.emptyList = viewModel.uiState{
                                 
                                 Spacer(minLength: 60)

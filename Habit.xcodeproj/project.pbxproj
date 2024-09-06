@@ -52,6 +52,8 @@
 		00929ACF2C8AA26500F67DB6 /* HabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929ACE2C8AA26500F67DB6 /* HabitViewModel.swift */; };
 		00929AD12C8AA54A00F67DB6 /* HabitUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AD02C8AA54A00F67DB6 /* HabitUIState.swift */; };
 		00929AD42C8B75E000F67DB6 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AD32C8B75E000F67DB6 /* ButtonStyle.swift */; };
+		00929AD62C8B7DF000F67DB6 /* HabitCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AD52C8B7DF000F67DB6 /* HabitCardViewModel.swift */; };
+		00929AD82C8B7F3600F67DB6 /* HabitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AD72C8B7F3600F67DB6 /* HabitCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +103,8 @@
 		00929ACE2C8AA26500F67DB6 /* HabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewModel.swift; sourceTree = "<group>"; };
 		00929AD02C8AA54A00F67DB6 /* HabitUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitUIState.swift; sourceTree = "<group>"; };
 		00929AD32C8B75E000F67DB6 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		00929AD52C8B7DF000F67DB6 /* HabitCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCardViewModel.swift; sourceTree = "<group>"; };
+		00929AD72C8B7F3600F67DB6 /* HabitCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				00929ACE2C8AA26500F67DB6 /* HabitViewModel.swift */,
+				00929AD52C8B7DF000F67DB6 /* HabitCardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -419,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				00929ACC2C8AA1EF00F67DB6 /* HabitView.swift */,
+				00929AD72C8B7F3600F67DB6 /* HabitCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -521,11 +527,13 @@
 				00929ABB2C80DF6700F67DB6 /* UserAuth.swift in Sources */,
 				00693FB62C659B7C00F84722 /* SplashView.swift in Sources */,
 				00929A822C6AEF9D00F67DB6 /* Gender.swift in Sources */,
+				00929AD82C8B7F3600F67DB6 /* HabitCardView.swift in Sources */,
 				00929AA22C752ADE00F67DB6 /* SignInRequest.swift in Sources */,
 				00929AAF2C7D013000F67DB6 /* SignInRemoteDataSource.swift in Sources */,
 				00929A7E2C6AD44200F67DB6 /* SignUpViewModel.swift in Sources */,
 				00693FC32C6663EE00F84722 /* SignInViewModel.swift in Sources */,
 				00929AB92C80C0E900F67DB6 /* SignUpRemoteDataSource.swift in Sources */,
+				00929AD62C8B7DF000F67DB6 /* HabitCardViewModel.swift in Sources */,
 				00929A902C6D293B00F67DB6 /* CustomTextFieldStyle.swift in Sources */,
 				00929AB52C7FCB9800F67DB6 /* AppError.swift in Sources */,
 				00929AC72C8AA17600F67DB6 /* HomeViewRouter.swift in Sources */,
