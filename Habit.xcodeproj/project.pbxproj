@@ -51,6 +51,7 @@
 		00929ACD2C8AA1EF00F67DB6 /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929ACC2C8AA1EF00F67DB6 /* HabitView.swift */; };
 		00929ACF2C8AA26500F67DB6 /* HabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929ACE2C8AA26500F67DB6 /* HabitViewModel.swift */; };
 		00929AD12C8AA54A00F67DB6 /* HabitUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AD02C8AA54A00F67DB6 /* HabitUIState.swift */; };
+		00929AD42C8B75E000F67DB6 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AD32C8B75E000F67DB6 /* ButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +100,7 @@
 		00929ACC2C8AA1EF00F67DB6 /* HabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
 		00929ACE2C8AA26500F67DB6 /* HabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewModel.swift; sourceTree = "<group>"; };
 		00929AD02C8AA54A00F67DB6 /* HabitUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitUIState.swift; sourceTree = "<group>"; };
+		00929AD32C8B75E000F67DB6 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +307,7 @@
 		00929A7F2C6AEF8300F67DB6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				00929AD22C8B75BC00F67DB6 /* Modifier */,
 				00929A982C6EF25C00F67DB6 /* Network */,
 				00929A932C6D3E9F00F67DB6 /* Lang */,
 				00929A872C6D10D000F67DB6 /* View */,
@@ -420,6 +423,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		00929AD22C8B75BC00F67DB6 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				00929AD32C8B75E000F67DB6 /* ButtonStyle.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -527,6 +538,7 @@
 				00929A762C6AA4DE00F67DB6 /* SignInViewRouter.swift in Sources */,
 				00929A9C2C6FBD4300F67DB6 /* SignUpRequest.swift in Sources */,
 				00693FC12C66639400F84722 /* SignInView.swift in Sources */,
+				00929AD42C8B75E000F67DB6 /* ButtonStyle.swift in Sources */,
 				00929AC12C814E3800F67DB6 /* SplashInteractor.swift in Sources */,
 				00929A8B2C6D112F00F67DB6 /* EditTextView.swift in Sources */,
 				00929AA42C752E2600F67DB6 /* SignInResponse.swift in Sources */,
