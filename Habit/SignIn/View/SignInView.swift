@@ -27,13 +27,13 @@ struct SignInView: View {
                         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 20) {
                             
                             VStack(alignment: .center, spacing: 8) {
-                                Image("logo")
+                                Image("habits")
                                     .resizable()
                                     .scaledToFit()
                                     .padding(.horizontal, 48)
                                 
                                 Text("Login")
-                                    .foregroundColor(.yellow)
+                                    .foregroundColor(.orange)
                                     .font(Font.system(.title).bold())
                                     .padding(.bottom, 8)
                                 

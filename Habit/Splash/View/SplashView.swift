@@ -34,7 +34,7 @@ struct SplashView: View {
 extension SplashView {
     func loadingView(error: String? = nil) -> some View {
         ZStack{
-            Image("logo")
+            Image("habits")
                 .resizable()
                 .scaledToFit()
                 .frame(maxWidth: .infinity, maxHeight: .infinity )
