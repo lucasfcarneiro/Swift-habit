@@ -36,18 +36,33 @@ struct HabitView: View {
                                         .scaledToFit()
                                         .frame(width: 24, height: 24, alignment: .center)
                                     Text("Nenhum hábito encontrado  :(")
-                                        
+                                    
                                 }
                                 
-                            }else if case HabitUIState.fullList = viewModel.uiState{
+                            }else if case HabitUIState.fullList(let rows) = viewModel.uiState{
                                 
-                            }else if case HabitUIState.error("") = viewModel.uiState{
+                                LazyVStack{
+                                    
+                                    ForEach(rows, content: HabitCardView.init(viewModel:))
+                                }.padding(.horizontal,14)
+                                
+                            }else if case HabitUIState.error(let msg) = viewModel.uiState{
+                                
+                                Text("")
+                                    .alert(isPresented: .constant(true)){
+                                        Alert(title: Text("Ops! \(msg)"),
+                                              message: Text("Tentar novamente?"),
+                                              primaryButton: .default(Text("Sim")){
+                                            viewModel.onAppear()
+                                        },
+                                              secondaryButton: .cancel())
+                                    }
                             }
                         }
                     }.navigationTitle("Meus Hábitos")
                 }
             }
-        }
+        }.onAppear{viewModel.onAppear()}
     }
 }
 
@@ -84,7 +99,7 @@ extension HabitView {
                 .stroke(Color.gray, lineWidth: 1.5)
         )
         .padding(.horizontal, 16)
-
+        
     }
 }
 

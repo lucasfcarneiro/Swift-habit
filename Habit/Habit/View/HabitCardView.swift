@@ -16,6 +16,7 @@ struct HabitCardView: View {
     var body: some View {
         ZStack(alignment: .trailing){
             
+            
             NavigationLink(isActive: {self.$action}(),
                            destination: {Text("Destination")},
                            label: {EmptyView()
@@ -72,6 +73,7 @@ struct HabitCardView: View {
                 }
                 .padding()
                 .cornerRadius(4.0)
+
             })
             
             Rectangle()
@@ -81,9 +83,11 @@ struct HabitCardView: View {
             RoundedRectangle(cornerRadius: 4.0)
                 .stroke(Color.orange, lineWidth: 1.4)
                 .shadow(color: .gray, radius: 2, x: 2.0, y: 2.0)
+                
         )
         .padding(.horizontal, 4)
         .padding(.vertical, 8)
+        
     }
 }
 
