@@ -54,6 +54,7 @@
 		00929AD42C8B75E000F67DB6 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AD32C8B75E000F67DB6 /* ButtonStyle.swift */; };
 		00929AD62C8B7DF000F67DB6 /* HabitCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AD52C8B7DF000F67DB6 /* HabitCardViewModel.swift */; };
 		00929AD82C8B7F3600F67DB6 /* HabitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AD72C8B7F3600F67DB6 /* HabitCardView.swift */; };
+		00929ADA2C8F7DC600F67DB6 /* HabitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929AD92C8F7DC600F67DB6 /* HabitResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		00929AD32C8B75E000F67DB6 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		00929AD52C8B7DF000F67DB6 /* HabitCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCardViewModel.swift; sourceTree = "<group>"; };
 		00929AD72C8B7F3600F67DB6 /* HabitCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCardView.swift; sourceTree = "<group>"; };
+		00929AD92C8F7DC600F67DB6 /* HabitResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				00929AD02C8AA54A00F67DB6 /* HabitUIState.swift */,
+				00929AD92C8F7DC600F67DB6 /* HabitResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				00929AC12C814E3800F67DB6 /* SplashInteractor.swift in Sources */,
 				00929A8B2C6D112F00F67DB6 /* EditTextView.swift in Sources */,
 				00929AA42C752E2600F67DB6 /* SignInResponse.swift in Sources */,
+				00929ADA2C8F7DC600F67DB6 /* HabitResponse.swift in Sources */,
 				00693FBB2C65C35000F84722 /* SplashViewModel.swift in Sources */,
 				00929A862C6AF91300F67DB6 /* SignUpViewRouter.swift in Sources */,
 			);

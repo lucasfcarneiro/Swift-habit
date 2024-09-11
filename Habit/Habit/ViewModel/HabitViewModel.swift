@@ -9,16 +9,19 @@ import Foundation
 
 class HabitViewModel: ObservableObject{
     
-    @Published var uiState: HabitUIState = .emptyList
+    @Published var uiState: HabitUIState = .loading
     
     @Published var title = "Atenção"
     @Published var headline = "Fique ligado"
     @Published var description = "você está atrasado nos hábitos"
+    @Published var showAlert = false
     
     func onAppear(){
         self.uiState = .loading
+        //self.uiState = .error("Falha interna")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+            
             
             var rows: [HabitCardViewModel] = []
             
@@ -55,7 +58,10 @@ class HabitViewModel: ObservableObject{
                                            state: .green))
 
 
-            self.uiState = .error("Falha interna no servidor")
+            //self.uiState = .fullList(rows)
+            self.uiState = .error("Falha interna")
+            //self.uiState = .emptyList
+            
         }
     }
 }
