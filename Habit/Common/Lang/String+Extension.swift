@@ -13,4 +13,23 @@ extension String{
 
         return NSPredicate(format: "SELF MATCHES %@", emailRegEx).evaluate(with: self)
     }
+    
+    func toDate(sourcePattern source: String, DestinePattern destine: String) -> String?{
+        
+        //Pegar a String -> dd/MM/yyyy -> Date
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = source
+        
+        let dateFormatted = formatter.date(from: self)
+        
+        //Validar a Data
+        guard let dateFormatted = dateFormatted else {
+            return nil
+        }
+        
+        //Date -> yyyy/MM/dd -> String
+        formatter.dateFormat = destine
+        return formatter.string(from: dateFormatted)
+    }
 }
