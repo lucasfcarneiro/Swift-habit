@@ -31,7 +31,7 @@ class HabitViewModel: ObservableObject{
     deinit{
         cancellableRequest?.cancel()
     }
-
+    
     
     func onAppear(){
         self.uiState = .loading
@@ -61,15 +61,15 @@ class HabitViewModel: ObservableObject{
                             let lastDate = $0.lastDate?.toDate(sourcePattern: "yyyy-MM-dd'T'HH:mm:ss",
                                                                DestinePattern: "dd/MM/yyyy HH:mm") ?? ""
                             
-                            let lastDateCompare = $0.lastDate?.toDate(sourcePattern: "yyyy-MM-dd'T'HH:mm:ss",
-                                                                      DestinePattern: "dd-MM-yyyy HH:mm") ?? ""
                             var state = Color.green
                             self.title = "Muito bom!"
                             self.headline = "Seus hábitos estão em dia"
                             self.description = ""
                             
-                            if lastDateCompare < Date().toString(destinePattern: "yyyy-MM-dd HH:mm"){
-                             
+                            let dateToCompare = $0.lastDate?.toDate(sourcePattern: "yyyy-MM-dd'T'HH:mm:ss")
+                            ?? Date()
+                            
+                            if dateToCompare < Date() {
                                 state = .red
                                 self.title = "Atenção!"
                                 self.headline = "Fique ligado!"
@@ -86,5 +86,5 @@ class HabitViewModel: ObservableObject{
                         })
                 }
             })
-        }
     }
+}
