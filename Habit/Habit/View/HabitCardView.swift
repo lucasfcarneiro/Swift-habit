@@ -16,9 +16,8 @@ struct HabitCardView: View {
     var body: some View {
         ZStack(alignment: .trailing){
             
-            
             NavigationLink(isActive: {self.$action}(),
-                           destination: {Text("Destination")},
+                           destination: {viewModel.habitDetailView()},
                            label: {EmptyView()
             })
             
