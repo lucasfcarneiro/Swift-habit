@@ -11,8 +11,6 @@ struct SignInView: View {
     
     @ObservedObject var viewModel: SignInViewModel
     
-    @State var email = ""
-    @State var password = ""
     @State var action : Int? = 0
     @State var navigationHidden = true
     
@@ -24,18 +22,18 @@ struct SignInView: View {
             }else {
                 NavigationView {
                     
-                    ScrollView{
-                        
+                    ScrollView(showsIndicators: false) {
+                       
                         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 20) {
                             
                             VStack(alignment: .center, spacing: 8) {
-                                Image("logo")
+                                Image("habits")
                                     .resizable()
                                     .scaledToFit()
                                     .padding(.horizontal, 48)
                                 
                                 Text("Login")
-                                    .foregroundColor(.yellow)
+                                    .foregroundColor(.orange)
                                     .font(Font.system(.title).bold())
                                     .padding(.bottom, 8)
                                 
@@ -65,36 +63,49 @@ struct SignInView: View {
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .padding(.horizontal, 32)
-                    .background(Color.white)
                     .navigationBarTitleDisplayMode(.inline)
                     .navigationTitle("Login")
                     .navigationBarHidden(navigationHidden)
                 }
+                .onAppear{
+                    self.navigationHidden = true
+                }
+                .onDisappear{
+                    self.navigationHidden = false
+                }
             }
         }
-        
     }
 }
 
 extension SignInView{
     var emailField : some View{
-        TextField("", text: $email)
-            .border(Color.black)
+        EditTextView(text: $viewModel.email,
+                     placeholder: "E-mail",
+                     error: "Email invalido",
+                     keyboard: .emailAddress, 
+                     failure: !viewModel.email.isEmail() )
     }
 }
 
 extension SignInView{
     var passwordField : some View{
-        SecureField("", text: $password)
-            .border(Color.black)
+        EditTextView(text: $viewModel.password,
+                     placeholder: "Senha",
+                     error: "Minimo 8 caracteres",
+                     keyboard: .emailAddress, 
+                     failure: viewModel.password.count < 8,
+                     isSecure: true )
     }
 }
 
 extension SignInView{
     var enterButton : some View{
-        Button("Entrar"){
-            viewModel.login(email : email, password : password)
-        }
+        LoadingButtonView(
+            action: {viewModel.login()},
+            disable: !viewModel.email.isEmail() || viewModel.password.count < 8,
+            showProgress: self.viewModel.uiState == SignInUIState.loading,
+            text: "Entrar")
     }
 }
 
@@ -122,5 +133,10 @@ extension SignInView {
 }
 
 #Preview {
-    SignInView(viewModel: SignInViewModel())
+    SignInView(viewModel: SignInViewModel(interactor: SignInInteractor()))
+        .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+}
+#Preview {
+    SignInView(viewModel: SignInViewModel(interactor: SignInInteractor()))
+        .preferredColorScheme(.light)
 }

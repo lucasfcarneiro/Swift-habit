@@ -11,15 +11,20 @@ import Combine
 class SignInViewModel: ObservableObject {
     
     private var cancellable : AnyCancellable?
+    private var cancellableRequest : AnyCancellable?
     
     private let publisher = PassthroughSubject<Bool, Never>()
+    private let interactor: SignInInteractor
     
     @Published var uiState : SignInUIState = .none
+    @Published var email = ""
+    @Published var password = ""
     
-    init(){
+    init(interactor: SignInInteractor){
+        self.interactor = interactor
+        
         cancellable = publisher.sink { value in
-//            print("Usuario criado goToHome : \(value)")
-            
+           
             if value {
                 self.uiState = .goToHomeScreen
             }
@@ -28,18 +33,35 @@ class SignInViewModel: ObservableObject {
     
     deinit{
         cancellable?.cancel()
+        cancellableRequest?.cancel()
     }
     
-    func login(email: String, password: String) {
+    
+    func login() {
         
         self.uiState = .loading
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1 ){
-            //simula resposta servidor chamando depois de 1 seg
+        cancellableRequest = interactor.login(loginRequest: SignInRequest(email: email,
+                                                     password: password))
+        .receive(on: DispatchQueue.main)
+        .sink{ completion in
+            //aqui acontece o Erro ou Finished
+            switch(completion) {
+            case .failure(let appError):
+                self.uiState = SignInUIState.error(appError.message)
+                break
+            case .finished:
+                break
+            }
+        } receiveValue: { success in
+            print(success)
+            let auth = UserAuth(idToken: success.accessToken,
+                                refreshToken: success.refreshToken,
+                                //data atual + data do token
+                                expires: Date().timeIntervalSince1970 + Double(success.expires),
+                                tokenType: success.tokenType)
+            self.interactor.insertAuth(userAuth: auth)
             self.uiState = .goToHomeScreen
-            
-            //self.uiState = .error("Usuario ou senha incorreta")
-            
         }
     }
 }

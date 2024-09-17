@@ -34,12 +34,11 @@ struct SplashView: View {
 extension SplashView {
     func loadingView(error: String? = nil) -> some View {
         ZStack{
-            Image("logo")
+            Image("habits")
                 .resizable()
                 .scaledToFit()
                 .frame(maxWidth: .infinity, maxHeight: .infinity )
                 .padding(35)
-                .background(Color.white)
                 .ignoresSafeArea()
             
             if let error = error {
@@ -85,5 +84,10 @@ extension SplashView {
 //}
 
 #Preview {
-    SplashView(viewModel: SplashViewModel())
+    SplashView(viewModel: SplashViewModel(interactor: SplashInteractor()))
+        .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+}
+#Preview {
+    SplashView(viewModel: SplashViewModel(interactor: SplashInteractor()))
+        .preferredColorScheme(.light)
 }
