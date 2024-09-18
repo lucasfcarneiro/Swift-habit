@@ -11,6 +11,8 @@ struct HabitDetailView: View {
     
     @ObservedObject var viewModel : HabitDetailViewModel
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             
@@ -37,7 +39,7 @@ struct HabitDetailView: View {
             Text("Os registros devem ser feitos em até 24h.\nHábitos se constroem todos os dias :)")
                 .padding()
         
-            LoadingButtonView(action: {},
+            LoadingButtonView(action: {viewModel.save()},
                               disable: self.viewModel.value.isEmpty,
                               showProgress: self.viewModel.uiState == .loading,
                               text: "Salvar")
@@ -46,6 +48,7 @@ struct HabitDetailView: View {
             
             Button("Cancelar"){
                 //dissmiss / pop exit
+                self.presentationMode.wrappedValue.dismiss()
             }
             .modifier(ButtonStyle())
             .padding(.horizontal,16)
@@ -59,10 +62,10 @@ struct HabitDetailView: View {
 
 
 #Preview {
-    HabitDetailView(viewModel: HabitDetailViewModel(id: 1, name: "Tocar guitarra", label: "horas"))
+    HabitDetailView(viewModel: HabitDetailViewModel(id: 1, name: "Tocar guitarra", label: "horas", interactor: HabitDetailInteractor()))
         .preferredColorScheme(.dark)
 }
 #Preview {
-    HabitDetailView(viewModel: HabitDetailViewModel(id: 1, name: "Tocar guitarra", label: "horas"))
+    HabitDetailView(viewModel: HabitDetailViewModel(id: 1, name: "Tocar guitarra", label: "horas", interactor: HabitDetailInteractor()))
         .preferredColorScheme(.light)
 }

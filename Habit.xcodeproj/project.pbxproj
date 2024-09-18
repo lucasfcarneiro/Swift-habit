@@ -11,6 +11,9 @@
 		00196C062C67F44D00148566 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00196C052C67F44D00148566 /* HomeView.swift */; };
 		00196C082C67F45C00148566 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00196C072C67F45C00148566 /* HomeViewModel.swift */; };
 		00196C0A2C67F4A000148566 /* HomeUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00196C092C67F4A000148566 /* HomeUIState.swift */; };
+		006082932C9A1D0000D814C3 /* HabitValueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006082922C9A1D0000D814C3 /* HabitValueRequest.swift */; };
+		006082962C9A1D6600D814C3 /* HabitDetailRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006082952C9A1D6600D814C3 /* HabitDetailRemoteDataSource.swift */; };
+		006082982C9B17DB00D814C3 /* HabitDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006082972C9B17DB00D814C3 /* HabitDetailInteractor.swift */; };
 		00693FA52C65997000F84722 /* HabitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00693FA42C65997000F84722 /* HabitApp.swift */; };
 		00693FA92C65997300F84722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00693FA82C65997300F84722 /* Assets.xcassets */; };
 		00693FAC2C65997300F84722 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00693FAB2C65997300F84722 /* Preview Assets.xcassets */; };
@@ -69,6 +72,9 @@
 		00196C052C67F44D00148566 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		00196C072C67F45C00148566 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		00196C092C67F4A000148566 /* HomeUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIState.swift; sourceTree = "<group>"; };
+		006082922C9A1D0000D814C3 /* HabitValueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitValueRequest.swift; sourceTree = "<group>"; };
+		006082952C9A1D6600D814C3 /* HabitDetailRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailRemoteDataSource.swift; sourceTree = "<group>"; };
+		006082972C9B17DB00D814C3 /* HabitDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailInteractor.swift; sourceTree = "<group>"; };
 		00693FA12C65997000F84722 /* Habit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00693FA42C65997000F84722 /* HabitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitApp.swift; sourceTree = "<group>"; };
 		00693FA82C65997300F84722 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,6 +174,15 @@
 				00196C092C67F4A000148566 /* HomeUIState.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		006082942C9A1D4A00D814C3 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				006082952C9A1D6600D814C3 /* HabitDetailRemoteDataSource.swift */,
+				006082972C9B17DB00D814C3 /* HabitDetailInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		00693F982C65997000F84722 = {
@@ -469,6 +484,7 @@
 		00929AEC2C94D72600F67DB6 /* HabitDetail */ = {
 			isa = PBXGroup;
 			children = (
+				006082942C9A1D4A00D814C3 /* Interactor */,
 				00929AEF2C94D74100F67DB6 /* Model */,
 				00929AEE2C94D73700F67DB6 /* ViewModel */,
 				00929AED2C94D73100F67DB6 /* View */,
@@ -496,6 +512,7 @@
 		00929AEF2C94D74100F67DB6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				006082922C9A1D0000D814C3 /* HabitValueRequest.swift */,
 				00929AF02C94D75A00F67DB6 /* HabitDetailUIState.swift */,
 			);
 			path = Model;
@@ -607,13 +624,16 @@
 				00929AB52C7FCB9800F67DB6 /* AppError.swift in Sources */,
 				00929AC72C8AA17600F67DB6 /* HomeViewRouter.swift in Sources */,
 				00929AC32C8247B200F67DB6 /* refreshRequest.swift in Sources */,
+				006082982C9B17DB00D814C3 /* HabitDetailInteractor.swift in Sources */,
 				00929AE12C9357F700F67DB6 /* Date+Extension.swift in Sources */,
 				00929ACF2C8AA26500F67DB6 /* HabitViewModel.swift in Sources */,
 				00693FC52C66654500F84722 /* SignInUIState.swift in Sources */,
+				006082962C9A1D6600D814C3 /* HabitDetailRemoteDataSource.swift in Sources */,
 				00929ACD2C8AA1EF00F67DB6 /* HabitView.swift in Sources */,
 				00929A7C2C6AD3E500F67DB6 /* SignUpView.swift in Sources */,
 				00929ADD2C9206D900F67DB6 /* HabitRemoteDataSource.swift in Sources */,
 				00693FB82C659C2300F84722 /* SplashUIState.swift in Sources */,
+				006082932C9A1D0000D814C3 /* HabitValueRequest.swift in Sources */,
 				00929A762C6AA4DE00F67DB6 /* SignInViewRouter.swift in Sources */,
 				00929A9C2C6FBD4300F67DB6 /* SignUpRequest.swift in Sources */,
 				00693FC12C66639400F84722 /* SignInView.swift in Sources */,
