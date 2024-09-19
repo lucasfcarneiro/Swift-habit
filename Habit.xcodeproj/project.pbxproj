@@ -14,6 +14,7 @@
 		006082932C9A1D0000D814C3 /* HabitValueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006082922C9A1D0000D814C3 /* HabitValueRequest.swift */; };
 		006082962C9A1D6600D814C3 /* HabitDetailRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006082952C9A1D6600D814C3 /* HabitDetailRemoteDataSource.swift */; };
 		006082982C9B17DB00D814C3 /* HabitDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006082972C9B17DB00D814C3 /* HabitDetailInteractor.swift */; };
+		0060829C2C9C5EBA00D814C3 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060829B2C9C5EBA00D814C3 /* ImageView.swift */; };
 		00693FA52C65997000F84722 /* HabitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00693FA42C65997000F84722 /* HabitApp.swift */; };
 		00693FA92C65997300F84722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00693FA82C65997300F84722 /* Assets.xcassets */; };
 		00693FAC2C65997300F84722 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00693FAB2C65997300F84722 /* Preview Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		006082922C9A1D0000D814C3 /* HabitValueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitValueRequest.swift; sourceTree = "<group>"; };
 		006082952C9A1D6600D814C3 /* HabitDetailRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailRemoteDataSource.swift; sourceTree = "<group>"; };
 		006082972C9B17DB00D814C3 /* HabitDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailInteractor.swift; sourceTree = "<group>"; };
+		0060829B2C9C5EBA00D814C3 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		00693FA12C65997000F84722 /* Habit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00693FA42C65997000F84722 /* HabitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitApp.swift; sourceTree = "<group>"; };
 		00693FA82C65997300F84722 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				00929A8C2C6D277000F67DB6 /* Style */,
 				00929A8A2C6D112F00F67DB6 /* EditTextView.swift */,
 				00929A962C6D465800F67DB6 /* LoadingButtonView.swift */,
+				0060829B2C9C5EBA00D814C3 /* ImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				006082982C9B17DB00D814C3 /* HabitDetailInteractor.swift in Sources */,
 				00929AE12C9357F700F67DB6 /* Date+Extension.swift in Sources */,
 				00929ACF2C8AA26500F67DB6 /* HabitViewModel.swift in Sources */,
+				0060829C2C9C5EBA00D814C3 /* ImageView.swift in Sources */,
 				00693FC52C66654500F84722 /* SignInUIState.swift in Sources */,
 				006082962C9A1D6600D814C3 /* HabitDetailRemoteDataSource.swift in Sources */,
 				00929ACD2C8AA1EF00F67DB6 /* HabitView.swift in Sources */,

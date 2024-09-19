@@ -28,8 +28,11 @@ struct HabitCardView: View {
                 
                 HStack{
                     
-                    Image(systemName: "pencil")
-                        .padding(.horizontal, 8)
+                    ImageView(url: viewModel.icon)
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 45, height: 45)
+                        .clipped()
+                        .background(Color.orange)
                     
                     Spacer()
                     
