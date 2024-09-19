@@ -21,19 +21,29 @@ class HabitViewModel: ObservableObject{
     @Published var opened = false
     
     private var cancellableRequest: AnyCancellable?
+    private var cancellableNotify: AnyCancellable?
     private let interactor: HabitInteractor
+    
+    private let habitPublisher = PassthroughSubject<Bool, Never>()
     
     init(interactor: HabitInteractor){
         self.interactor = interactor
         
+        //o habitPublisher é observado e sempre que for alterado o bloco é executado
+        cancellableNotify = habitPublisher.sink(receiveValue: { saved in
+            print("saved: \(saved)")
+            self.onAppear() //recarrega a tela de habitos
+        })
     }
     
     deinit{
         cancellableRequest?.cancel()
+        cancellableNotify?.cancel()
     }
     
     
     func onAppear(){
+        self.opened = true
         self.uiState = .loading
         
         cancellableRequest = interactor.fetchHabits()
@@ -76,13 +86,15 @@ class HabitViewModel: ObservableObject{
                                 self.description = "Você está atrasado nos hábitos"
                             }
                             
+                            //sempre que o cartao é instanciado(ou seja, criado) passo o habitpublisher pra ele
                             return HabitCardViewModel(id: $0.id,
                                                       icon: $0.iconUrl ?? "",
                                                       date: lastDate,
                                                       name: $0.name,
                                                       label: $0.label,
                                                       value: "\($0.value ?? 0)",
-                                                      state: state)
+                                                      state: state,
+                                                      habitPublisher: self.habitPublisher)
                         })
                 }
             })
