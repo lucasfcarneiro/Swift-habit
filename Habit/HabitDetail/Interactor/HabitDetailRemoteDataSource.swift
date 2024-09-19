@@ -20,6 +20,7 @@ class HabitDetailRemoteDataSource {
     func save(habitId: Int, request: HabitValueRequest) -> Future<Bool, AppError>{
         return Future<Bool, AppError> { promise in
             
+            //coloca o habitid no lugar do %d em habitvalues
             let path = String(format:WebService.Endpoint.habitsValues.rawValue, habitId)
             
             WebService.call(path: path, method: .post, body: request) { result in
