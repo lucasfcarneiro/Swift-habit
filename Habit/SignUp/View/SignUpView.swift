@@ -25,7 +25,7 @@ struct SignUpView: View {
                         TextFieldExtension(
                             stringBinding: $viewModel.fullName,
                             placeholder: "Nome Completo",
-                            error: "Nome curto",
+                            error: "Nome deve ter no minimo 3 caracteres",
                             keyboard: .namePhonePad,
                             failure: viewModel.fullName.count < 3)
                         
@@ -66,7 +66,7 @@ struct SignUpView: View {
                             placeholder: "Data de nascimento",
                             error: "Data deve ser dd/mm/aaaa",
                             keyboard: .emailAddress,
-                            failure: viewModel.birthday.count < 10)
+                            failure: viewModel.birthday.count != 10)
                         //TODO MASK
                         
                         genderField

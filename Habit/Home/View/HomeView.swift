@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @ObservedObject var viewModel: HomeViewModel
+
     
     @State var selection = 0
     
@@ -27,7 +28,7 @@ struct HomeView: View {
                 Text("Graficos")
             }.tag(1)
             
-            Text("Conteudo de perfil \(selection)")
+            viewModel.profileView()
             .tabItem {
                 Image(systemName: "person.crop.circle")
                 Text("Perfil")
