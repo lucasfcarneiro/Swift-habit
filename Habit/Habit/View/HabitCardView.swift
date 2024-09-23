@@ -32,7 +32,6 @@ struct HabitCardView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 45, height: 45)
                         .clipped()
-                        .background(Color.orange)
                     
                     Spacer()
                     
