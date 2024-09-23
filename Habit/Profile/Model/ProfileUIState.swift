@@ -9,6 +9,7 @@ import Foundation
 
 enum ProfileUIState: Equatable {
         case loading
-        case success
-        case error(String)
+        case fetchSuccess
+        case fetchError(String)
+        case none
 }

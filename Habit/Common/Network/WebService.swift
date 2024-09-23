@@ -13,11 +13,14 @@ enum WebService{
         case base = "https://habitplus-api.tiagoaguiar.co"
         
         case postUser = "/users"
+        
         case login = "/auth/login"
         case refreshToken = "/auth/refresh-token"
         
         case habits = "/users/me/habits"
         case habitsValues = "/users/me/habits/%d/values"
+        
+        case fetchUser = "/users/me"
     }
     
     enum NetworkError {
