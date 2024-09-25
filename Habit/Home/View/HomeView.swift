@@ -22,7 +22,7 @@ struct HomeView: View {
                 Text("Habitos")
             }.tag(0)
             
-            Text("Conteudo de graficos \(selection)")
+            viewModel.habitForChartView()
             .tabItem {
                 Image(systemName: "chart.bar")
                 Text("Graficos")

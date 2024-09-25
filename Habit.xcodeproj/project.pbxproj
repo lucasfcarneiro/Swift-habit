@@ -22,6 +22,7 @@
 		006082AE2CA1CA6700D814C3 /* profileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006082AD2CA1CA6700D814C3 /* profileResponse.swift */; };
 		006082B12CA1CB0800D814C3 /* ProfileRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006082B02CA1CB0800D814C3 /* ProfileRemoteDataSource.swift */; };
 		006082B32CA1CEF200D814C3 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006082B22CA1CEF200D814C3 /* ProfileInteractor.swift */; };
+		006082CA2CA4C71C00D814C3 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006082C92CA4C71C00D814C3 /* ChartView.swift */; };
 		00693FA52C65997000F84722 /* HabitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00693FA42C65997000F84722 /* HabitApp.swift */; };
 		00693FA92C65997300F84722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00693FA82C65997300F84722 /* Assets.xcassets */; };
 		00693FAC2C65997300F84722 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00693FAB2C65997300F84722 /* Preview Assets.xcassets */; };
@@ -91,6 +92,7 @@
 		006082AD2CA1CA6700D814C3 /* profileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileResponse.swift; sourceTree = "<group>"; };
 		006082B02CA1CB0800D814C3 /* ProfileRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRemoteDataSource.swift; sourceTree = "<group>"; };
 		006082B22CA1CEF200D814C3 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		006082C92CA4C71C00D814C3 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		00693FA12C65997000F84722 /* Habit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00693FA42C65997000F84722 /* HabitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitApp.swift; sourceTree = "<group>"; };
 		00693FA82C65997300F84722 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -247,6 +249,38 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		006082B52CA2499F00D814C3 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				006082B82CA249C900D814C3 /* View */,
+				006082B72CA249BF00D814C3 /* ViewModel */,
+				006082B62CA249B600D814C3 /* Model */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		006082B62CA249B600D814C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		006082B72CA249BF00D814C3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		006082B82CA249C900D814C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				006082C92CA4C71C00D814C3 /* ChartView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		00693F982C65997000F84722 = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +301,7 @@
 		00693FA32C65997000F84722 /* Habit */ = {
 			isa = PBXGroup;
 			children = (
+				006082B52CA2499F00D814C3 /* Charts */,
 				0060829D2C9CA36E00D814C3 /* Profile */,
 				00929AEC2C94D72600F67DB6 /* HabitDetail */,
 				00929AC82C8AA1A700F67DB6 /* Habit */,
@@ -705,6 +740,7 @@
 				00929ADD2C9206D900F67DB6 /* HabitRemoteDataSource.swift in Sources */,
 				006082A82C9CA3EF00D814C3 /* ProfileUIState.swift in Sources */,
 				00693FB82C659C2300F84722 /* SplashUIState.swift in Sources */,
+				006082CA2CA4C71C00D814C3 /* ChartView.swift in Sources */,
 				006082932C9A1D0000D814C3 /* HabitValueRequest.swift in Sources */,
 				00929A762C6AA4DE00F67DB6 /* SignInViewRouter.swift in Sources */,
 				00929A9C2C6FBD4300F67DB6 /* SignUpRequest.swift in Sources */,
