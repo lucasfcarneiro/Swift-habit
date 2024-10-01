@@ -12,4 +12,8 @@ enum ProfileUIState: Equatable {
         case fetchSuccess
         case fetchError(String)
         case none
+    
+        case updateSuccess
+        case updateLoading
+        case updateError(String)
 }

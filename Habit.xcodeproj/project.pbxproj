@@ -32,6 +32,7 @@
 		00693FC32C6663EE00F84722 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00693FC22C6663EE00F84722 /* SignInViewModel.swift */; };
 		00693FC52C66654500F84722 /* SignInUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00693FC42C66654500F84722 /* SignInUIState.swift */; };
 		00693FC72C666F7E00F84722 /* SplashViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00693FC62C666F7E00F84722 /* SplashViewRouter.swift */; };
+		007396532CAC819B007248E8 /* ProfileUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007396522CAC819B007248E8 /* ProfileUpdateRequest.swift */; };
 		00929A762C6AA4DE00F67DB6 /* SignInViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A752C6AA4DE00F67DB6 /* SignInViewRouter.swift */; };
 		00929A7C2C6AD3E500F67DB6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A7B2C6AD3E500F67DB6 /* SignUpView.swift */; };
 		00929A7E2C6AD44200F67DB6 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00929A7D2C6AD44200F67DB6 /* SignUpViewModel.swift */; };
@@ -102,6 +103,7 @@
 		00693FC22C6663EE00F84722 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		00693FC42C66654500F84722 /* SignInUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUIState.swift; sourceTree = "<group>"; };
 		00693FC62C666F7E00F84722 /* SplashViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewRouter.swift; sourceTree = "<group>"; };
+		007396522CAC819B007248E8 /* ProfileUpdateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateRequest.swift; sourceTree = "<group>"; };
 		00929A752C6AA4DE00F67DB6 /* SignInViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewRouter.swift; sourceTree = "<group>"; };
 		00929A7B2C6AD3E500F67DB6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		00929A7D2C6AD44200F67DB6 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			children = (
 				006082A72C9CA3EF00D814C3 /* ProfileUIState.swift */,
 				006082AD2CA1CA6700D814C3 /* profileResponse.swift */,
+				007396522CAC819B007248E8 /* ProfileUpdateRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 				00693FB62C659B7C00F84722 /* SplashView.swift in Sources */,
 				00929ADF2C933B7F00F67DB6 /* HabitInteractor.swift in Sources */,
 				00929A822C6AEF9D00F67DB6 /* Gender.swift in Sources */,
+				007396532CAC819B007248E8 /* ProfileUpdateRequest.swift in Sources */,
 				0009C5FA2C99EB5600DFB8A1 /* HabitCardViewRouter.swift in Sources */,
 				00929AD82C8B7F3600F67DB6 /* HabitCardView.swift in Sources */,
 				00929AA22C752ADE00F67DB6 /* SignInRequest.swift in Sources */,
