@@ -57,14 +57,14 @@ struct HabitCardView: View {
                             Text(viewModel.date)
                                 .foregroundColor(Color("textColor"))
                                 .bold()
-
+                            
                         }.frame(maxWidth: 300, alignment: .leading)
                         
                         
                         Spacer()
                         
                         VStack(alignment: .leading, spacing: 4) {
-                                
+                            
                             Text("Registrado")
                                 .foregroundColor(Color.orange)
                                 .bold()
@@ -82,7 +82,7 @@ struct HabitCardView: View {
                 }
                 .padding()
                 .cornerRadius(4.0)
-
+                
             })
             
             if !isChart {
@@ -94,7 +94,7 @@ struct HabitCardView: View {
             RoundedRectangle(cornerRadius: 4.0)
                 .stroke(Color.orange, lineWidth: 1.4)
                 .shadow(color: .gray, radius: 2, x: 2.0, y: 2.0)
-                
+            
         )
         .padding(.horizontal, 4)
         .padding(.vertical, 8)
@@ -106,21 +106,21 @@ struct HabitCardView: View {
     NavigationView {
         List {
             HabitCardView(isChart: false, viewModel: HabitCardViewModel(id: 1,
-                                                        icon: "https://placehold.co/150x150",
-                                                        date: "01/01/2024 12:35:35",
-                                                        name: "Tocar guitarra",
-                                                        label: "horas",
-                                                        value: "2",
-                                                        state: .green,
-                                                        habitPublisher: PassthroughSubject<Bool, Never>()))
+                                                                        icon: "https://placehold.co/150x150",
+                                                                        date: "01/01/2024 12:35:35",
+                                                                        name: "Tocar guitarra",
+                                                                        label: "horas",
+                                                                        value: "2",
+                                                                        state: .green,
+                                                                        habitPublisher: PassthroughSubject<Bool, Never>()))
             HabitCardView(isChart: false, viewModel: HabitCardViewModel(id: 1,
-                                                        icon: "https://placehold.co/150x150",
-                                                        date: "01/01/2024 12:35:35",
-                                                        name: "Tocar guitarra",
-                                                        label: "horas",
-                                                        value: "2",
-                                                        state: .green,habitPublisher: PassthroughSubject<Bool, Never>()))
-                .frame(maxWidth: .infinity)
+                                                                        icon: "https://placehold.co/150x150",
+                                                                        date: "01/01/2024 12:35:35",
+                                                                        name: "Tocar guitarra",
+                                                                        label: "horas",
+                                                                        value: "2",
+                                                                        state: .green,habitPublisher: PassthroughSubject<Bool, Never>()))
+            .frame(maxWidth: .infinity)
         }
         .navigationTitle("teste")
         .preferredColorScheme(.light)
@@ -130,20 +130,20 @@ struct HabitCardView: View {
     NavigationView {
         List {
             HabitCardView(isChart: false, viewModel: HabitCardViewModel(id: 1,
-                                                        icon: "https://placehold.co/150x150",
-                                                        date: "01/01/2024 12:35:35",
-                                                        name: "Tocar guitarra",
-                                                        label: "horas",
-                                                        value: "2",
-                                                        state: .green,habitPublisher: PassthroughSubject<Bool, Never>()))
+                                                                        icon: "https://placehold.co/150x150",
+                                                                        date: "01/01/2024 12:35:35",
+                                                                        name: "Tocar guitarra",
+                                                                        label: "horas",
+                                                                        value: "2",
+                                                                        state: .green,habitPublisher: PassthroughSubject<Bool, Never>()))
             HabitCardView(isChart: false, viewModel: HabitCardViewModel(id: 1,
-                                                        icon: "https://placehold.co/150x150",
-                                                        date: "01/01/2024 12:35:35",
-                                                        name: "Tocar guitarra",
-                                                        label: "horas",
-                                                        value: "2",
-                                                        state: .green,habitPublisher: PassthroughSubject<Bool, Never>()))
-                .frame(maxWidth: .infinity)
+                                                                        icon: "https://placehold.co/150x150",
+                                                                        date: "01/01/2024 12:35:35",
+                                                                        name: "Tocar guitarra",
+                                                                        label: "horas",
+                                                                        value: "2",
+                                                                        state: .green,habitPublisher: PassthroughSubject<Bool, Never>()))
+            .frame(maxWidth: .infinity)
         }
         .navigationTitle("Cards")
         .preferredColorScheme(.dark)
