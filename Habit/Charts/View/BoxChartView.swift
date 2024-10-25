@@ -78,7 +78,7 @@ class DateAxisValueFormatter: IndexAxisValueFormatter{
         let position = Int(value)
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         
         if position > 0 && position < dates.count {
             let date = formatter.date(from: dates[position])
@@ -111,5 +111,5 @@ class DateAxisValueFormatter: IndexAxisValueFormatter{
                     "03/02/2024",
                     "04/02/2024"
                  ]))
-    .frame(maxWidth: .infinity, maxHeight: 350)
+    .frame(maxWidth: 200, maxHeight: 350)
 }

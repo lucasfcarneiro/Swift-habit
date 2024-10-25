@@ -8,29 +8,51 @@
 import Foundation
 import SwiftUI
 import Charts
+import Combine
 
 class ChartViewModel: ObservableObject {
     
-    @Published var entries: [ChartDataEntry] = [
-        ChartDataEntry(x: 1, y: 2),
-        ChartDataEntry(x: 2, y: 5),
-        ChartDataEntry(x: 3, y: 7),
-        ChartDataEntry(x: 4, y: 4),
-        ChartDataEntry(x: 5, y: 6),
-        ChartDataEntry(x: 6, y: 2),
-        ChartDataEntry(x: 7, y: 10),
-        ChartDataEntry(x: 8, y: 9),
-        
-    ]
+    @Published var uiState = ChartUIState.loading
+    @Published var entries: [ChartDataEntry] = []
+    @Published var dates: [String] = []
     
-    @Published var dates = [
-        "2024-01-01",
-        "2024-01-02",
-        "2024-01-03",
-        "2024-01-04",
-        "2024-01-05",
-        "2024-01-06",
-        "2024-01-07",
-        "2024-01-08",
-    ]
+    private var cancellable: AnyCancellable?
+    
+    private let habitId: Int
+    private let interactor: ChartInteractor
+    
+    init(habitId: Int, interactor: ChartInteractor) {
+        self.habitId = habitId
+        self.interactor = interactor
+    }
+    
+    deinit{
+        cancellable?.cancel()
+    }
+    
+    func onAppear() {
+        cancellable = interactor.fetchHabitValue(habitId: habitId)
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                switch(completion){
+                case .failure(let appError):
+                    self.uiState = .error(appError.message)
+                case . finished:
+                    break
+                }
+            }, receiveValue: { response in
+                if response.isEmpty {
+                    self.uiState = .emptyChart
+                }else{
+                    self.dates = response.map{$0.createdDate}
+                    
+                    // [0...N] , [HabitValueResponse] percorre os valores da resposta para criar uma lista afim de injetar no grafico
+                    self.entries = zip(response.startIndex..<response.endIndex, response).map{ index, response in
+                        ChartDataEntry(x: Double(index), y: Double(response.value))
+                    }
+                    self.uiState = .fullChart
+                    print()
+                }
+            })
+    }
 }

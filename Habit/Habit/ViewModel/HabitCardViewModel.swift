@@ -33,6 +33,6 @@ extension HabitCardViewModel {
     }
     
     func habitForChart() -> some View {
-        return HabitCardViewRouter.makeChartView()
+        return HabitCardViewRouter.makeChartView(id: id)
     }
 }
